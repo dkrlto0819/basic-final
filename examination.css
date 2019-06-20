@@ -15,6 +15,7 @@ html, body{
 }
 
 .container {
+    position: relative;
     text-align: center;
     height: 100%;
     width: 1390px;
@@ -22,10 +23,10 @@ html, body{
     padding-bottom: 60px;
     box-sizing: border-box;
     margin: auto;
+    padding-bottom: 0px;
 
     justify-content: center;
     align-items: center;
-    /* display: flex; */
 }
 
 header{
@@ -41,11 +42,10 @@ header{
 
     font-size: 19px;
     color: #d6d8dc;
-    text-align: center;
     box-sizing: border-box; 
 }
 
-img{
+img.logoImage{
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -54,6 +54,7 @@ img{
 }
 
 .contents {
+    display: flex;
     float: left;
     position: relative;
     width: 1200px;   
@@ -62,13 +63,218 @@ img{
 
 main > section {
     float: left;
-    height: 100%;
+    /* height: fit-content; */
     background-image: url("./images/bg.gif");
     background-repeat: repeat-x;
     position: relative;
     width: 300px;
-  }
+
+    box-sizing: border-box; 
+    box-shadow: inset -5px 0 5px #282d36;
+
+    padding: 25px 25px;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+
+    width: 100%; 
+    height: 50px;
+    background-color: #282d36;
+    
+    border-top: 1px solid #3e424a;
+    text-align: center;
+    line-height: 50px;
+    box-sizing: border-box;
+}
+
+.title{
+    line-height: 1.25em;
+    font-size: 2em;
+    font-weight: normal;
+    color: #d6d8dc;
+    text-align: left;
+}
+
+.subtitle{
+    line-height: 1.5em;
+    padding-top: 12px;
+    padding-bottom:  40px;
+    color : #febe1e;
+    text-align: left;
+}
+
+.explanation{
+    text-align: left;
+    height: 150px;
+    color: #a7a7a7
+}
+
+ul{
+    text-align: left;
+}
+
+li{
+    padding-bottom:  7px;    
+}
+
+dl{ 
+    margin-top: 20px;
+    color:#fff;
+}
+
+dt{
+    padding-bottom: 7px;
+    margin: 0; 
+    text-align: left;
+    float: left;
+    clear: left;
+}
+
+dd{
+    text-align: right;
+    margin: 0;
+    float: right;
+}
+
+a{
+    color: #fff;
+}
+
+.JS_title{
+    font-weight: bold;
+    font-size: 1em;
+    padding-bottom: 5px;
+    border-bottom : 1px solid #868c98;
+    color: #fff;
+    text-align: left;
+}
+
+.image-wrap{
+    position: relative;
+
+    margin: 0 auto;
+    width: 250px;
+    height: 142px;
+    border : 3px solid #5c6475;
+    padding: auto;
+    box-sizing: border-box;
+}
+
+img.vscode{
+    width: 100%;
+    height: 100%;
+}
+
+.screenShot{
+    position: absolute;
+    bottom: 30px;
+    left: auto;
+
+    margin: 0 auto;
+
+    width: 250px;
+    height: 30px;
+    opacity: 0.5;
+    background-color: #000;
+    color:#c5c5c5;
+    font-size:12px;
+    text-align: center;
+    position: relative;
+    line-height: 30px;
+
+}
+
+.download{
+    padding-top: 30px;
+    border-top: 1px solid #868c98;
+    border-bottom: 1px solid #868c98;
+    font-size: 1.4em;
+    width: auto;
+    color: #a7a7a7;
+    padding: 12px;
+}
 
 @media only screen and (max-width: 798px){
-   
+    .container{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+    header{
+        display: block;
+        background-image: url('');
+        height: 60px;
+        width:100%;
+        background-color: #282d36;
+        float: left;
+    }
+
+    img.logoImage{
+        display: inline-block;
+        margin: 5px 10px 5px 10px;
+        height: 100%;
+        padding: 0;
+        
+        width: 40px;
+        height: 50px;
+        object-fit: none;
+        object-position: left;
+        float: left;
+    }
+
+   p.subject{
+       display: inline-block;
+       float: left;
+
+       text-align: center;
+       line-height: 60px;
+   }
+
+    .contents{
+        max-height: auto;
+        flex-direction: column;
+    }  
+    
+    .subtitle{
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+
+   main > section{
+       width: 100%;
+       height: auto;
+       box-shadow: inset 0px -5px 5px #282d36;
+   }
+
+   .explanation{
+       height: auto;
+       width: 100%;
+   }
+
+   .list{
+       visibility: hidden;
+   }
+
+   main > section:nth-child(1) {
+       float: none;
+        width: 100%;
+    }
+
+    main > section:nth-child(2) {
+        float: none;
+        width: 100%;
+    }
+
+    main > section:nth-child(3) {
+        float: none;
+        width: 100%;
+    }
+
+    main > section:nth-child(4) {
+        height: auto;
+        float: none;
+    }
 }
